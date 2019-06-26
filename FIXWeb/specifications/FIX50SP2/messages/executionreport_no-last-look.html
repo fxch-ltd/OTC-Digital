@@ -1,0 +1,502 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head><body class="group">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+<div name="message">
+    <img src='../../../img/message.png' />
+    <h2>ExecutionReport (Type: 8) - no-last-look</h2>
+    <h3></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('StandardHeader', this.parentNode.parentNode)">StandardHeader</a></td>
+            <td>Y</td>
+            <td>The standard FIX message header<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/beginstring.html', 1);">8</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/beginstring.html', 1);">BeginString</a>
+                </td>
+                        <td>Y</td>
+                <td>Identifies beginning of new message and protocol version. ALWAYS FIRST FIELD IN MESSAGE. (Always unencrypted)<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/bodylength.html', 1);">9</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/bodylength.html', 1);">BodyLength</a>
+                </td>
+                        <td>Y</td>
+                <td>Message length, in bytes, forward to the CheckSum field. ALWAYS SECOND FIELD IN MESSAGE. (Always unencrypted)<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/msgtype.html', 1);">35</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/msgtype.html', 1);">MsgType</a>
+                </td>
+                        <td>Y</td>
+                <td>Defines message type ALWAYS THIRD FIELD IN MESSAGE. (Always unencrypted)<br/>Note: A &quot;U&quot; as the first character in the MsgType field (i.e. U, U2, etc) indicates that the message format is privately defined between the sender and receiver.<br/>*** Note the use of lower case letters ***<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/applverid.html', 1);">1128</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/applverid.html', 1);">ApplVerID</a>
+                </td>
+                        <td>N</td>
+                <td>Specifies the service pack release being applied at message level. Enumerated field with values assigned at time of service pack release<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/sendercompid.html', 1);">49</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/sendercompid.html', 1);">SenderCompID</a>
+                </td>
+                        <td>Y</td>
+                <td>Assigned value used to identify firm sending message.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/targetcompid.html', 1);">56</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/targetcompid.html', 1);">TargetCompID</a>
+                </td>
+                        <td>Y</td>
+                <td>Assigned value used to identify receiving firm.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/delivertocompid.html', 1);">128</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/delivertocompid.html', 1);">DeliverToCompID</a>
+                </td>
+                        <td>N</td>
+                <td>Assigned value used to identify the firm targeted to receive the message if the message is delivered by a third party i.e. the third party firm identifier would be delivered in the TargetCompID (56) field and the ultimate receiver firm ID in this field.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securedatalen.html', 1);">90</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securedatalen.html', 1);">SecureDataLen</a>
+                </td>
+                        <td>N</td>
+                <td>Length of encrypted message<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securedata.html', 1);">91</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securedata.html', 1);">SecureData</a>
+                </td>
+                        <td>N</td>
+                <td>Actual encrypted data stream<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/msgseqnum.html', 1);">34</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/msgseqnum.html', 1);">MsgSeqNum</a>
+                </td>
+                        <td>Y</td>
+                <td>Integer message sequence number.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/sendersubid.html', 1);">50</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/sendersubid.html', 1);">SenderSubID</a>
+                </td>
+                        <td>N</td>
+                <td>Assigned value used to identify specific message originator (desk, trader, etc.)<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/senderlocationid.html', 1);">142</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/senderlocationid.html', 1);">SenderLocationID</a>
+                </td>
+                        <td>N</td>
+                <td>Assigned value used to identify specific message originator's location (i.e. geographic location and/or desk, trader)<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/targetsubid.html', 1);">57</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/targetsubid.html', 1);">TargetSubID</a>
+                </td>
+                        <td>N</td>
+                <td>Assigned value used to identify specific individual or unit intended to receive message. &quot;ADMIN&quot; reserved for administrative messages not intended for a specific user.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/delivertosubid.html', 1);">129</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/delivertosubid.html', 1);">DeliverToSubID</a>
+                </td>
+                        <td>N</td>
+                <td>Assigned value used to identify specific message recipient (i.e. trader) if the message is delivered by a third party<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/possdupflag.html', 1);">43</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/possdupflag.html', 1);">PossDupFlag</a>
+                </td>
+                        <td>N</td>
+                <td>Indicates possible retransmission of message with this sequence number<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/possresend.html', 1);">97</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/possresend.html', 1);">PossResend</a>
+                </td>
+                        <td>N</td>
+                <td>Indicates that message may contain information that has been sent under another sequence number.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/sendingtime.html', 1);">52</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/sendingtime.html', 1);">SendingTime</a>
+                </td>
+                        <td>Y</td>
+                <td>Time of message transmission (always expressed in UTC (Universal Time Coordinated, also known as &quot;GMT&quot;)<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/origsendingtime.html', 1);">122</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/origsendingtime.html', 1);">OrigSendingTime</a>
+                </td>
+                        <td>N</td>
+                <td>Original time of message transmission (always expressed in UTC (Universal Time Coordinated, also known as &quot;GMT&quot;) when transmitting orders as the result of a resend request.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/messageencoding.html', 1);">347</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/messageencoding.html', 1);">MessageEncoding</a>
+                </td>
+                        <td>N</td>
+                <td>Type of message encoding (non-ASCII (non-English) characters) used in a message's &quot;Encoded&quot; fields.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardHeader">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/lastmsgseqnumprocessed.html', 1);">369</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/lastmsgseqnumprocessed.html', 1);">LastMsgSeqNumProcessed</a>
+                </td>
+                        <td>N</td>
+                <td>The last MsgSeqNum (34) value received by the FIX engine and processed by downstream application, such as trading engine or order routing system. Can be specified on every message sent. Useful for detecting a backlog with a counterparty.<br/></td>
+            </tr>
+                    <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/orderid.html', 1)">37</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/orderid.html', 1)">OrderID</a></td>
+            <td>Y</td>
+            <td>Unique identifier for Order as assigned by system, ECN. Uniqueness must be guaranteed (best practice = embedding a date within the OrderID field to assure uniqueness across days).<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/secondaryclordid.html', 1)">526</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/secondaryclordid.html', 1)">SecondaryClOrdID</a></td>
+            <td>Y</td>
+            <td>Unique identifier for Order as assigned by the exchange, ECN or system. Uniqueness should be guaranteed within a single trading day (best practice = embedding a date within the OrderID field to assure uniqueness across days).<br/>Assigned by the Broker or firm which originated the order. Used to propagate the ClOrdID (11) used by the exchange, ECN or system.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/clordid.html', 1)">11</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/clordid.html', 1)">ClOrdID</a></td>
+            <td>Y</td>
+            <td>Assigned by the Broker or firm which originated the order. Used to propagate the ClOrdID (11) used by the exchange, ECN or system.<br/>For Fills of no-last-look Quotes, this message will refer to the Executed Quote. Mapped to:<br/>- QuoteMsgID(1166) of a single Quote<br/>- QuoteID(117) of a Mass Quote.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/execid.html', 1)">17</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/execid.html', 1)">ExecID</a></td>
+            <td>Y</td>
+            <td>Unique identifier of execution message assigned by ECN, system.<br/>Uniqueness must be guaranteed (best practice = embedding a date within the OrderID field to assure uniqueness across days).<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/exectype.html', 1)">150</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/exectype.html', 1)">ExecType</a></td>
+            <td>Y</td>
+            <td>Describes the specific ExecutionRpt while OrdStatus (39) will always identify the current order status (i.e. Partially Filled)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/ordstatus.html', 1)">39</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/ordstatus.html', 1)">OrdStatus</a></td>
+            <td>Y</td>
+            <td>Identifies current status of the QUOTE that was hit by this fill.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/account.html', 1)">1</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/account.html', 1)">Account</a></td>
+            <td>N</td>
+            <td>Account mnemonic as agreed between Clearing and institution.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settltype.html', 1)">63</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settltype.html', 1)">SettlType</a></td>
+            <td>N</td>
+            <td>Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for SettlType (63) is 0 (Regular)<br/>Regular is defined as the default settlement period for the particular security.<br/>Additionally the following patterns may be uses as well as enum values<br/>Dx = FX tenor expression for &quot;days&quot;, e.g. &quot;D5&quot;, where &quot;x&quot; is any integer &gt; 0<br/>Wx = FX tenor expression for &quot;weeks&quot;, e.g. &quot;W13&quot;, where &quot;x&quot; is any integer &gt; 0<br/>Noted that tenors expressed using Dx, and Wx values do not denote business days, but calendar days.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate.html', 1)">64</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate.html', 1)">SettlDate</a></td>
+            <td>N</td>
+            <td>Specific date of trade settlement (SettlementDate) in YYYYMMDD format.<br/>If present, this field overrides SettlType (63). This field is required if the value of SettlType (63) is B (Broken Date).<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('Instrument', this.parentNode.parentNode)">Instrument</a></td>
+            <td>Y</td>
+            <td>The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block can be used to describe any asset type supported by FIX.<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1);">55</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1);">Symbol</a>
+                </td>
+                        <td>N</td>
+                <td>Symbol: common, &quot;human understood&quot; representation of the Instrument. E.g. BTCUSD or XRPJPY<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1);">167</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1);">SecurityType</a>
+                </td>
+                        <td>N</td>
+                <td>Indicates type of security. Security type enumerations are grouped by Product(460) field value. NOTE: Additional values may be used by mutual agreement of the counterparties.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1);">969</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1);">MinPriceIncrement</a>
+                </td>
+                        <td>N</td>
+                <td>Minimum price increase supported by system, ECN for a given Instrument<br/></td>
+            </tr>
+                    <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/side.html', 1)">54</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/side.html', 1)">Side</a></td>
+            <td>Y</td>
+            <td>Side of order (see Volume : &quot;Glossary&quot; for value definitions)<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('OrderQtyData', this.parentNode.parentNode)">OrderQtyData</a></td>
+            <td>N</td>
+            <td>The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as &quot;required&quot; in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent (in the case of CIV).<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, OrderQtyData">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/orderqty.html', 1);">38</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/orderqty.html', 1);">OrderQty</a>
+                </td>
+                        <td>Y</td>
+                <td>Quantity ordered. This represents the number of shares for equities or par, face or nominal value for FI instruments.<br/>(Prior to FIX 4.2 this field was of type int)<br/></td>
+            </tr>
+                    <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/ordtype.html', 1)">40</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/ordtype.html', 1)">OrdType</a></td>
+            <td>N</td>
+            <td>Type of Order that generated that fill.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/price.html', 1)">44</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/price.html', 1)">Price</a></td>
+            <td>N</td>
+            <td>Price at which the Order that generated this Fill was submitted.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/currency.html', 1)">15</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/currency.html', 1)">Currency</a></td>
+            <td>N</td>
+            <td>Identifies currency used for Qty. Absence of this field is interpreted as the default (base or left side of the pair). It is recommended that systems provide this currency value to avoid confusion.<br/>Can be used to get all Currency Pairs including THIS currency. E.g. Currency (15) = JPY the response could be USD/JPY; BTC/JPY and ETH/JPY<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/execinst.html', 1)">18</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/execinst.html', 1)">ExecInst</a></td>
+            <td>N</td>
+            <td>Instructions for order handling on exchange trading floor. If more than one instruction is applicable to an order, this field can contain multiple instructions separated by space. *** SOME VALUES HAVE BEEN REPLACED - See &quot;Replaced Features and Supported Approach&quot; *** (see Volume : &quot;Glossary&quot; for value definitions)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastqty.html', 1)">32</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastqty.html', 1)">LastQty</a></td>
+            <td>N</td>
+            <td>Quantity (e.g. shares) bought/sold on this (last) fill.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastswappoints.html', 1)">1071</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastswappoints.html', 1)">LastSwapPoints</a></td>
+            <td>N</td>
+            <td>For FX Swap, this is used to express the last market event for the differential between the far leg's bid/offer and the near leg's bid/offer in a fill or partial fill. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastpx.html', 1)">31</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastpx.html', 1)">LastPx</a></td>
+            <td>N</td>
+            <td>Price of this (last) fill.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastspotrate.html', 1)">194</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastspotrate.html', 1)">LastSpotRate</a></td>
+            <td>N</td>
+            <td>F/X spot rate.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastforwardpoints.html', 1)">195</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastforwardpoints.html', 1)">LastForwardPoints</a></td>
+            <td>N</td>
+            <td>F/X forward points added to LastSpotRate (94). May be a negative value. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/leavesqty.html', 1)">151</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/leavesqty.html', 1)">LeavesQty</a></td>
+            <td>Y</td>
+            <td>Quantity of QUOTE (QuteMsgID) open for further execution. If the OrdStatus (39) is Expired (in which case the QUOTE is no longer active) then LeavesQty could be 0<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/cumqty.html', 1)">14</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/cumqty.html', 1)">CumQty</a></td>
+            <td>Y</td>
+            <td>Total quantity filled on that QuoteMsgID.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/avgpx.html', 1)">6</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/avgpx.html', 1)">AvgPx</a></td>
+            <td>N</td>
+            <td>Calculated average price of all fills on this QUOTE (QuoteMsgID).<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/tradedate.html', 1)">75</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/tradedate.html', 1)">TradeDate</a></td>
+            <td>Y</td>
+            <td>Indicates date of trade referenced in this message in YYYYMMDD format. Note that Dateline is 5pm New York (all year) local time.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/transacttime.html', 1)">60</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/transacttime.html', 1)">TransactTime</a></td>
+            <td>Y</td>
+            <td>Timestamp when the business transaction represented by the message occurred.<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('CommissionData', this.parentNode.parentNode)">CommissionData</a></td>
+            <td>N</td>
+            <td>The CommissionDate component block is used to carry commission information such as the type of commission and the rate.<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, CommissionData">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/commission.html', 1);">12</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/commission.html', 1);">Commission</a>
+                </td>
+                        <td>N</td>
+                <td>Commission of exchange, ECN or system.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, CommissionData">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/commcurrency.html', 1);">479</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/commcurrency.html', 1);">CommCurrency</a>
+                </td>
+                        <td>N</td>
+                <td>Specifies currency to be use for Commission (12) if the Commission currency is different from the Deal Currency - see &quot;Appendix 6-A; Valid Currency Codes&quot;.<br/></td>
+            </tr>
+                    <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bookingtype.html', 1)">775</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bookingtype.html', 1)">BookingType</a></td>
+            <td>N</td>
+            <td>Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or similar).<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/text.html', 1)">58</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/text.html', 1)">Text</a></td>
+            <td>N</td>
+            <td>Free format text string<br/>Can be used to elaborate on the reject reason<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate2.html', 1)">193</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate2.html', 1)">SettlDate2</a></td>
+            <td>N</td>
+            <td>SettlDate (64) of the far leg part of an F/X swap order.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/manualorderindicator.html', 1)">1028</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/manualorderindicator.html', 1)">ManualOrderIndicator</a></td>
+            <td>N</td>
+            <td>Indicates if the order was initially received manually (as opposed to electronically)<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('StandardTrailer', this.parentNode.parentNode)">StandardTrailer</a></td>
+            <td>Y</td>
+            <td>The standard FIX message trailer<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, StandardTrailer">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/signaturelength.html', 1);">93</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/signaturelength.html', 1);">SignatureLength</a>
+                </td>
+                        <td>N</td>
+                <td>Number of bytes in signature field<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardTrailer">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/signature.html', 1);">89</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/signature.html', 1);">Signature</a>
+                </td>
+                        <td>N</td>
+                <td>Electronic signature<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, StandardTrailer">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/checksum.html', 1);">10</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/checksum.html', 1);">CheckSum</a>
+                </td>
+                        <td>Y</td>
+                <td>Three byte, simple checksum (see Volume 2: &quot;Checksum Calculation&quot; for description). ALWAYS LAST FIELD IN MESSAGE; i.e. serves, with the trailing &lt;SOH&gt;, as the end-of-message delimiter. Always defined as three characters. (Always unencrypted)<br/></td>
+            </tr>
+                </table></div>
