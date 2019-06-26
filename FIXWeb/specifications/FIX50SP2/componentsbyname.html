@@ -1,0 +1,236 @@
+<link rel="stylesheet" href="../../style.css"/>
+<link rel="stylesheet" href="../../userstyle.css"/>
+<script type="text/javascript" language="JavaScript" src="../../js/browser.js"></script>
+<h2>Components (25) </h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/commissiondata.html', 1)">CommissionData</a>
+        </td>
+        <td>
+            Block
+        </td>
+        <td>The CommissionDate component block is used to carry commission information such as the type of commission and the rate.<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/instrument.html', 1)">Instrument</a>
+        </td>
+        <td>
+            Block
+        </td>
+        <td>The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block can be used to describe any asset type supported by FIX.<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/instrumentleg.html', 1)">InstrumentLeg</a>
+        </td>
+        <td>
+            Block
+        </td>
+        <td>The InstrumentLeg component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the InstrumentLeg component block it describes a security used in multileg-oriented messages.<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/linesoftextgrp.html', 1)">LinesOfTextGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/orderqtydata.html', 1)">OrderQtyData</a>
+        </td>
+        <td>
+            Block
+        </td>
+        <td>The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as &quot;required&quot; in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent (in the case of CIV).<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/parties.html', 1)">Parties</a>
+        </td>
+        <td>
+            BlockRepeating
+        </td>
+        <td>The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the PartyRole field and identifies the source of the PartyID through the the PartyIDSource.<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/positionqty.html', 1)">PositionQty</a>
+        </td>
+        <td>
+            BlockRepeating
+        </td>
+        <td>The PositionQty component block specifies the various types of position quantity in the position life-cycle including start-of-day, intraday, trade, adjustments, and end-of-day position quantities. Quantities are expressed in terms of long and short quantities.<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/ptyssubgrp.html', 1)">PtysSubGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/quotcxlentriesgrp.html', 1)">QuotCxlEntriesGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/quotentryackgrp.html', 1)">QuotEntryAckGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/quotentrygrp.html', 1)">QuotEntryGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/quotqualgrp.html', 1)">QuotQualGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/quotreqgrp.html', 1)">QuotReqGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/quotreqrjctgrp.html', 1)">QuotReqRjctGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/quotsetackgrp.html', 1)">QuotSetAckGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/quotsetgrp.html', 1)">QuotSetGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/rootparties.html', 1)">RootParties</a>
+        </td>
+        <td>
+            BlockRepeating
+        </td>
+        <td>The RootParties component block is a version of the Parties component block used to provide root information regarding the owning and entering parties of a transaction.<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/seclistgrp.html', 1)">SecListGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/sidecrossordmodgrp.html', 1)">SideCrossOrdModGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/standardheader.html', 1)">StandardHeader</a>
+        </td>
+        <td>
+            Block
+        </td>
+        <td>The standard FIX message header<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/standardtrailer.html', 1)">StandardTrailer</a>
+        </td>
+        <td>
+            Block
+        </td>
+        <td>The standard FIX message trailer<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/stipulations.html', 1)">Stipulations</a>
+        </td>
+        <td>
+            BlockRepeating
+        </td>
+        <td>The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not considered static data information.<br/></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/trdsesslstgrp.html', 1)">TrdSessLstGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/undsecaltidgrp.html', 1)">UndSecAltIDGrp</a>
+        </td>
+        <td>
+            ImplicitBlockRepeating
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="javascript:void(0);" onClick="loadComponent('components/underlyinginstrument.html', 1)">UnderlyingInstrument</a>
+        </td>
+        <td>
+            Block
+        </td>
+        <td>The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the UnderlyingInstrument component block it describes an instrument which underlies the primary instrument Refer to the Instrument component block comments as this component block mirrors Instrument, except for the noted fields.<br/></td>
+    </tr>
+</table>

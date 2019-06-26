@@ -1,0 +1,185 @@
+<div name="field">
+<h2>${specification.version} Datatypes</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Base Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Sequence of digits without commas or decimals and optional sign character (ASCII characters &quot;-&quot; and &quot;0&quot; - &quot;9&quot; ). The sign character utilizes one byte (i.e. positive int is &quot;99999&quot; while negative int is &quot;-99999&quot;). Note that int values may contain leading zeros (e.g. &quot;00023&quot; = &quot;23&quot;).<br/>Examples:<br/>723 in field 21 would be mapped int as |21=723|.<br/>-723 in field 12 would be mapped int as |12=-723|<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>int field representing the length in bytes. Value must be positive.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>int field representing a field's tag number when using FIX &quot;Tag=Value&quot; syntax. Value must be positive and may not contain leading zeros.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>int field representing a message sequence number. Value must be positive.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>int field representing the number of entries in a repeating group. Value must be positive.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>int field representing a day during a particular monthy (values 1 to 31).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Sequence of digits with optional decimal point and sign character (ASCII characters &quot;-&quot;, &quot;0&quot; - &quot;9&quot; and &quot;.&quot;); the absence of the decimal point within the string will be interpreted as the float representation of an integer value. All float fields must accommodate up to fifteen significant digits. The number of decimal places used should be a factor of business/market needs and mutual agreement between counterparties. Note that float values may contain leading zeros (e.g. &quot;00023.23&quot; = &quot;23.23&quot;) and may contain or omit trailing zeros after the decimal point (e.g. &quot;23.0&quot; = &quot;23.0000&quot; = &quot;23&quot; = &quot;23.&quot;).<br/>Note that fields which are derived from float may contain negative values unless explicitly specified otherwise. The following data types are based on float.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>float field capable of storing either a whole number (no decimal places) of &quot;shares&quot; (securities denominated in whole units) or a decimal value containing decimal places for non-share quantity asset classes (securities denominated in fractional units).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>float field representing a price. Note the number of decimal places may vary. For certain asset classes prices may be negative values. For example, prices for options strategies can be negative under certain market conditions. Refer to Volume 7: FIX Usage by Product for asset classes that support negative price values.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>float field representing a price offset, which can be mathematically added to a &quot;Price&quot;. Note the number of decimal places may vary and some fields such as LastForwardPoints may be negative.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>float field typically representing a Price times a Qty<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>float field representing a percentage (e.g. 0.05 represents 5% and 0.9525 represents 95.25%). Note the number of decimal places may vary.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Single character value, can include any alphanumeric character or punctuation except the delimiter. All char fields are case sensitive (i.e. m != M).<br/>The following fields are based on char.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>char field containing one of two values:<br/>'Y' = True/Yes<br/>'N' = False/No<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Alpha-numeric free format strings, can include any character or punctuation except the delimiter. All String fields are case sensitive (i.e. morstatt != Morstatt).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field containing one or more space delimited single character values (e.g. |18=2 A F| ).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field containing one or more space delimited multiple character values (e.g. |277=AV AN A| ).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field representing a country using ISO 3166 Country code (2 character) values (see Appendix 6-B).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field representing a currency type using ISO 4217 Currency code (3 character) values (see Appendix 6-A).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field representing a market or exchange using ISO 10383 Market Identifier Code (MIC) values (see&quot;Appendix 6-C).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field representing month of a year. An optional day of the month can be appended or an optional week code.<br/>Valid formats:<br/>YYYYMM<br/>YYYYMMDD<br/>YYYYMMWW<br/>Valid values:<br/>YYYY = 0000-9999; MM = 01-12; DD = 01-31; WW = w1, w2, w3, w4, w5.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field representing Time/date combination represented in UTC (Universal Time Coordinated, also known as &quot;GMT&quot;) in either YYYYMMDD-HH:MM:SS (whole seconds) or YYYYMMDD-HH:MM:SS.sss (milliseconds) format, colons, dash, and period required.<br/>Valid values:<br/>* YYYY = 0000-9999, MM = 01-12, DD = 01-31, HH = 00-23, MM = 00-59, SS = 00-60 (60 only if UTC leap second) (without milliseconds).<br/>* YYYY = 0000-9999, MM = 01-12, DD = 01-31, HH = 00-23, MM = 00-59, SS = 00-60 (60 only if UTC leap second), sss=000-999 (indicating milliseconds).<br/>Leap Seconds: Note that UTC includes corrections for leap seconds, which are inserted to account for slowing of the rotation of the earth. Leap second insertion is declared by the International Earth Rotation Service (IERS) and has, since 1972, only occurred on the night of Dec. 31 or Jun 30. The IERS considers March 31 and September 30 as secondary dates for leap second insertion, but has never utilized these dates. During a leap second insertion, a UTCTimestamp field may read &quot;19981231-23:59:59&quot;, &quot;19981231-23:59:60&quot;, &quot;19990101-00:00:00&quot;. (see http://tycho.usno.navy.mil/leapsec.html)<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field representing Time-only represented in UTC (Universal Time Coordinated, also known as &quot;GMT&quot;) in either HH:MM:SS (whole seconds) or HH:MM:SS.sss (milliseconds) format, colons, and period required. This special-purpose field is paired with UTCDateOnly to form a proper UTCTimestamp for bandwidth-sensitive messages.<br/>Valid values:<br/>HH = 00-23, MM = 00-60 (60 only if UTC leap second), SS = 00-59. (without milliseconds)<br/>HH = 00-23, MM = 00-59, SS = 00-60 (60 only if UTC leap second), sss=000-999 (indicating milliseconds).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field representing Date represented in UTC (Universal Time Coordinated, also known as &quot;GMT&quot;) in YYYYMMDD format. This special-purpose field is paired with UTCTimeOnly to form a proper UTCTimestamp for bandwidth-sensitive messages.<br/>Valid values:<br/>YYYY = 0000-9999, MM = 01-12, DD = 01-31.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field represening a Date of Local Market (as oppose to UTC) in YYYYMMDD format. This is the &quot;normal&quot; date field used by the FIX Protocol.<br/>Valid values:<br/>YYYY = 0000-9999, MM = 01-12, DD = 01-31.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field representing the time represented based on ISO 8601. This is the time with a UTC offset to allow identification of local time and timezone of that time.<br/>Format is HH:MM[:SS][Z | [ + | - hh[:mm]]] where HH = 00-23 hours, MM = 00-59 minutes, SS = 00-59 seconds, hh = 01-12 offset hours, mm = 00-59 offset minutes.<br/>Example: 07:39Z is 07:39 UTC<br/>Example: 02:39-05 is five hours behind UTC, thus Eastern Time<br/>Example: 15:39+08 is eight hours ahead of UTC, Hong Kong/Singapore time<br/>Example: 13:09+05:30 is 5.5 hours ahead of UTC, India time<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field representing a time/date combination representing local time with an offset to UTC to allow identification of local time and timezone offset of that time. The representation is based on ISO 8601.<br/>Format is YYYYMMDD-HH:MM:SS[Z | [ + | - hh[:mm]]] where YYYY = 0000 to 9999, MM = 01-12, DD = 01-31 HH = 00-23 hours, MM = 00-59 minutes, SS = 00-59 seconds, hh = 01-12 offset hours, mm = 00-59 offset minutes<br/>Example: 20060901-07:39Z is 07:39 UTC on 1st of September 2006<br/>Example: 20060901-02:39-05 is five hours behind UTC, thus Eastern Time on 1st of September 2006<br/>Example: 20060901-15:39+08 is eight hours ahead of UTC, Hong Kong/Singapore time on 1st of September 2006<br/>Example: 20060901-13:09+05:30 is 5.5 hours ahead of UTC, India time on 1st of September 2006<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>string field containing raw data with no format or content restrictions. Data fields are always immediately preceded by a length field. The length field should specify the number of bytes of the value of the data field (up to but not including the terminating SOH).<br/>Caution: the value of one of these fields may contain the delimiter (SOH) character. Note that the value specified for this field should be followed by the delimiter (SOH) character as all fields are terminated with an &quot;SOH&quot;.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Used to build on and provide some restrictions on what is allowed as valid values in fields that uses a base FIX data type and a pattern data type. The universe of allowable valid values for the field would then be the union of the base set of valid values and what is defined by the pattern data type. The pattern data type used by the field will retain its base FIX data type (e.g. String, int, char).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>used to allow the expression of FX standard tenors in addition to the base valid enumerations defined for the field that uses this pattern data type. This pattern data type is defined as follows:<br/>Dx = tenor expression for &quot;days&quot;, e.g. &quot;D5&quot;, where &quot;x&quot; is any integer &gt; 0<br/>Mx = tenor expression for &quot;months&quot;, e.g. &quot;M3&quot;, where &quot;x&quot; is any integer &gt; 0<br/>Wx = tenor expression for &quot;weeks&quot;, e.g. &quot;W13&quot;, where &quot;x&quot; is any integer &gt; 0<br/>Yx = tenor expression for &quot;years&quot;, e.g. &quot;Y1&quot;, where &quot;x&quot; is any integer &gt; 0<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Values &quot;100&quot; and above are reserved for bilaterally agreed upon user defined enumerations.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Values &quot;1000&quot; and above are reserved for bilaterally agreed upon user defined enumerations.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Values &quot;4000&quot; and above are reserved for bilaterally agreed upon user defined enumerations.<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Contains an XML document raw data with no format or content restrictions. XMLData fields are always immediately preceded by a length field. The length field should specify the number of bytes of the value of the data field (up to but not including the terminating SOH).<br/></td>
+    </tr>
+    <tr>
+        <td>$datatype.typeName</td>
+        <td>$datatype.baseType.typeName</td>
+        <td>Identifier for a national language - uses ISO 639-1 standard<br/></td>
+    </tr>
+</table>
+</div>
