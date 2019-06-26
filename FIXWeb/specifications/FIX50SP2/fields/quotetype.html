@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="field">
+<div class="field">
+    <div class="top"><div></div></div>
+        <div class="content">
+<img src="../../../img/field.png" height="32"/>
+<a href="javascript:void(0);" onClick="hideFieldPanel()" style="float: right;">[Hide]</a>
+<h2>QuoteType (537)</h2>
+<h3>Identifies the type of quote.<br/>With indicative quotes, the LP has a &quot;last look&quot; option and the right to reject. The LP will send an Execution Report in response to an Order.<br/>A tradeable quote will result directly in a trade without a last look option. LP will receive an Execution Report directly (no Order).<br/></h3>
+<p>Type: int</p>
+<table class="enums">
+    <tr>
+        <td>0</td>
+        <td>Indicative<br/></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Tradeable<br/></td>
+    </tr>
+</table>
+<h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotestatusreport.html', 1);">[QuoteStatusReport]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/massquote.html', 1);">[MassQuote]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotecancel.html', 1);">[QuoteCancel]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoteresponse.html', 1);">[QuoteResponse]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quote.html', 1);">[Quote]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/massquoteacknowledgement.html', 1);">[MassQuoteAcknowledgement]</a>&nbsp; 
+<h4>Used in Components:</h4>
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotreqgrp.html', 1);">[QuotReqGrp]</a>&nbsp; 
+        </div>
+    <div class="bottom"><div></div></div>
+</div>
+</body>
+</html>
