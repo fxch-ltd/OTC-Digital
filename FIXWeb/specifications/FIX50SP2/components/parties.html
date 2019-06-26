@@ -1,0 +1,79 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>Parties</h2>
+    <h3>The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the PartyRole field and identifies the source of the PartyID through the the PartyIDSource.<br/></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/nopartyids.html', 1)">453</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/nopartyids.html', 1)">NoPartyIDs</a></td>
+            <td>N</td>
+            <td>Repeating group below should contain unique combinations of PartyID, PartyIDSource, and PartyRole<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/partyid.html', 1)">448</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/partyid.html', 1)">PartyID</a></td>
+            <td>N</td>
+            <td>Party identifier/code. See PartyIDSource (447) and PartyRole (452).<br/>See &quot;Appendix 6-G - Use of &lt;Parties&gt; Component Block&quot;<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/partyrole.html', 1)">452</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/partyrole.html', 1)">PartyRole</a></td>
+            <td>N</td>
+            <td>Identifies the type or role of the PartyID (448) specified.<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('PtysSubGrp', this.parentNode.parentNode)">PtysSubGrp</a></td>
+            <td>N</td>
+            <td></td>
+        </tr>
+                <tr class="subElement indentLevel1, PtysSubGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/nopartysubids.html', 1);">802</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/nopartysubids.html', 1);">NoPartySubIDs</a>
+                </td>
+                        <td>N</td>
+                <td></td>
+            </tr>
+                                    <tr class="subElement indentLevel1, PtysSubGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partysubid.html', 1);">523</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partysubid.html', 1);">PartySubID</a>
+                </td>
+                        <td>N</td>
+                <td>Sub-identifier (e.g. Clearing Account for PartyRole (452)=Clearing Firm, Locate ID # for PartyRole=Locate/Lending Firm, etc). Not required when using PartyID (448), PartyIDSource (447), and PartyRole.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, PtysSubGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partysubidtype.html', 1);">803</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partysubidtype.html', 1);">PartySubIDType</a>
+                </td>
+                        <td>N</td>
+                <td>Type of PartySubID (523) value<br/>4000+ = Reserved and available for bi-laterally agreed upon user defined values<br/></td>
+            </tr>
+                            </table><h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/newordersingle.html', 1);">[NewOrderSingle]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quote.html', 1);">[Quote]</a>&nbsp; 
+<h4>Used in Components:</h4>
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotreqgrp.html', 1);">[QuotReqGrp]</a>&nbsp; 
+</div>
+</body>
+</html>

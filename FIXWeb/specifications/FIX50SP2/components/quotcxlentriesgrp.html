@@ -1,0 +1,65 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>QuotCxlEntriesGrp</h2>
+    <h3></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/noquoteentries.html', 1)">295</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/noquoteentries.html', 1)">NoQuoteEntries</a></td>
+            <td>N</td>
+            <td>The number of securities (instruments) whose quotes are to be canceled<br/>Not required when cancelling all quotes.<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('Instrument', this.parentNode.parentNode)">Instrument</a></td>
+            <td>N</td>
+            <td>The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block can be used to describe any asset type supported by FIX.<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1);">55</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1);">Symbol</a>
+                </td>
+                        <td>N</td>
+                <td>Symbol: common, &quot;human understood&quot; representation of the Instrument. E.g. BTCUSD or XRPJPY<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1);">167</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1);">SecurityType</a>
+                </td>
+                        <td>N</td>
+                <td>Indicates type of security. Security type enumerations are grouped by Product(460) field value. NOTE: Additional values may be used by mutual agreement of the counterparties.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1);">969</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1);">MinPriceIncrement</a>
+                </td>
+                        <td>N</td>
+                <td>Minimum price increase supported by system, ECN for a given Instrument<br/></td>
+            </tr>
+                </table><h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotecancel.html', 1);">[QuoteCancel]</a>&nbsp; 
+<h4>Used in Components:</h4>
+</div>
+</body>
+</html>

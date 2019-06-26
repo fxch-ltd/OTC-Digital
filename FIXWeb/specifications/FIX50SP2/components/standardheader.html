@@ -1,0 +1,171 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>StandardHeader</h2>
+    <h3>The standard FIX message header<br/></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/beginstring.html', 1)">8</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/beginstring.html', 1)">BeginString</a></td>
+            <td>Y</td>
+            <td>Identifies beginning of new message and protocol version. ALWAYS FIRST FIELD IN MESSAGE. (Always unencrypted)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bodylength.html', 1)">9</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bodylength.html', 1)">BodyLength</a></td>
+            <td>Y</td>
+            <td>Message length, in bytes, forward to the CheckSum field. ALWAYS SECOND FIELD IN MESSAGE. (Always unencrypted)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/msgtype.html', 1)">35</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/msgtype.html', 1)">MsgType</a></td>
+            <td>Y</td>
+            <td>Defines message type ALWAYS THIRD FIELD IN MESSAGE. (Always unencrypted)<br/>Note: A &quot;U&quot; as the first character in the MsgType field (i.e. U, U2, etc) indicates that the message format is privately defined between the sender and receiver.<br/>*** Note the use of lower case letters ***<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/applverid.html', 1)">1128</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/applverid.html', 1)">ApplVerID</a></td>
+            <td>N</td>
+            <td>Specifies the service pack release being applied at message level. Enumerated field with values assigned at time of service pack release<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/sendercompid.html', 1)">49</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/sendercompid.html', 1)">SenderCompID</a></td>
+            <td>Y</td>
+            <td>Assigned value used to identify firm sending message.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/targetcompid.html', 1)">56</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/targetcompid.html', 1)">TargetCompID</a></td>
+            <td>Y</td>
+            <td>Assigned value used to identify receiving firm.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/delivertocompid.html', 1)">128</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/delivertocompid.html', 1)">DeliverToCompID</a></td>
+            <td>N</td>
+            <td>Assigned value used to identify the firm targeted to receive the message if the message is delivered by a third party i.e. the third party firm identifier would be delivered in the TargetCompID (56) field and the ultimate receiver firm ID in this field.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/securedatalen.html', 1)">90</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/securedatalen.html', 1)">SecureDataLen</a></td>
+            <td>N</td>
+            <td>Length of encrypted message<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/securedata.html', 1)">91</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/securedata.html', 1)">SecureData</a></td>
+            <td>N</td>
+            <td>Actual encrypted data stream<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/msgseqnum.html', 1)">34</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/msgseqnum.html', 1)">MsgSeqNum</a></td>
+            <td>Y</td>
+            <td>Integer message sequence number.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/sendersubid.html', 1)">50</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/sendersubid.html', 1)">SenderSubID</a></td>
+            <td>N</td>
+            <td>Assigned value used to identify specific message originator (desk, trader, etc.)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/senderlocationid.html', 1)">142</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/senderlocationid.html', 1)">SenderLocationID</a></td>
+            <td>N</td>
+            <td>Assigned value used to identify specific message originator's location (i.e. geographic location and/or desk, trader)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/targetsubid.html', 1)">57</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/targetsubid.html', 1)">TargetSubID</a></td>
+            <td>N</td>
+            <td>Assigned value used to identify specific individual or unit intended to receive message. &quot;ADMIN&quot; reserved for administrative messages not intended for a specific user.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/delivertosubid.html', 1)">129</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/delivertosubid.html', 1)">DeliverToSubID</a></td>
+            <td>N</td>
+            <td>Assigned value used to identify specific message recipient (i.e. trader) if the message is delivered by a third party<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/possdupflag.html', 1)">43</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/possdupflag.html', 1)">PossDupFlag</a></td>
+            <td>N</td>
+            <td>Indicates possible retransmission of message with this sequence number<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/possresend.html', 1)">97</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/possresend.html', 1)">PossResend</a></td>
+            <td>N</td>
+            <td>Indicates that message may contain information that has been sent under another sequence number.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/sendingtime.html', 1)">52</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/sendingtime.html', 1)">SendingTime</a></td>
+            <td>Y</td>
+            <td>Time of message transmission (always expressed in UTC (Universal Time Coordinated, also known as &quot;GMT&quot;)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/origsendingtime.html', 1)">122</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/origsendingtime.html', 1)">OrigSendingTime</a></td>
+            <td>N</td>
+            <td>Original time of message transmission (always expressed in UTC (Universal Time Coordinated, also known as &quot;GMT&quot;) when transmitting orders as the result of a resend request.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/messageencoding.html', 1)">347</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/messageencoding.html', 1)">MessageEncoding</a></td>
+            <td>N</td>
+            <td>Type of message encoding (non-ASCII (non-English) characters) used in a message's &quot;Encoded&quot; fields.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastmsgseqnumprocessed.html', 1)">369</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/lastmsgseqnumprocessed.html', 1)">LastMsgSeqNumProcessed</a></td>
+            <td>N</td>
+            <td>The last MsgSeqNum (34) value received by the FIX engine and processed by downstream application, such as trading engine or order routing system. Can be specified on every message sent. Useful for detecting a backlog with a counterparty.<br/></td>
+        </tr>
+    </table><h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotecancel.html', 1);">[QuoteCancel]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoteresponse.html', 1);">[QuoteResponse]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_lastlook.html', 1);">[ExecutionReport - lastLook]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/businessmessagereject.html', 1);">[BusinessMessageReject]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/sequencereset.html', 1);">[SequenceReset]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/tradingsessionstatusrequest.html', 1);">[TradingSessionStatusRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/logout.html', 1);">[Logout]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/securitylistrequest.html', 1);">[SecurityListRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/resendrequest.html', 1);">[ResendRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoterequest.html', 1);">[QuoteRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoterequestreject.html', 1);">[QuoteRequestReject]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/logon.html', 1);">[Logon]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/massquote.html', 1);">[MassQuote]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotestatusreport.html', 1);">[QuoteStatusReport]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_no-last-look.html', 1);">[ExecutionReport - no-last-look]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotestatusrequest.html', 1);">[QuoteStatusRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/dontknowtrade.html', 1);">[DontKnowTrade]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/heartbeat.html', 1);">[Heartbeat]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/testrequest.html', 1);">[TestRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/newordersingle.html', 1);">[NewOrderSingle]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quote.html', 1);">[Quote]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/reject.html', 1);">[Reject]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/tradingsessionstatus.html', 1);">[TradingSessionStatus]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/orderstatusrequest.html', 1);">[OrderStatusRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/securitylist.html', 1);">[SecurityList]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionacknowledgement.html', 1);">[ExecutionAcknowledgement]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport.html', 1);">[ExecutionReport]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/massquoteacknowledgement.html', 1);">[MassQuoteAcknowledgement]</a>&nbsp; 
+<h4>Used in Components:</h4>
+</div>
+</body>
+</html>

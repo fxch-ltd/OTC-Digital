@@ -1,0 +1,69 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>StandardTrailer</h2>
+    <h3>The standard FIX message trailer<br/></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/signaturelength.html', 1)">93</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/signaturelength.html', 1)">SignatureLength</a></td>
+            <td>N</td>
+            <td>Number of bytes in signature field<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/signature.html', 1)">89</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/signature.html', 1)">Signature</a></td>
+            <td>N</td>
+            <td>Electronic signature<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/checksum.html', 1)">10</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/checksum.html', 1)">CheckSum</a></td>
+            <td>Y</td>
+            <td>Three byte, simple checksum (see Volume 2: &quot;Checksum Calculation&quot; for description). ALWAYS LAST FIELD IN MESSAGE; i.e. serves, with the trailing &lt;SOH&gt;, as the end-of-message delimiter. Always defined as three characters. (Always unencrypted)<br/></td>
+        </tr>
+    </table><h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotecancel.html', 1);">[QuoteCancel]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoteresponse.html', 1);">[QuoteResponse]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_lastlook.html', 1);">[ExecutionReport - lastLook]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/businessmessagereject.html', 1);">[BusinessMessageReject]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/sequencereset.html', 1);">[SequenceReset]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/tradingsessionstatusrequest.html', 1);">[TradingSessionStatusRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/logout.html', 1);">[Logout]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/securitylistrequest.html', 1);">[SecurityListRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/resendrequest.html', 1);">[ResendRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoterequest.html', 1);">[QuoteRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoterequestreject.html', 1);">[QuoteRequestReject]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/logon.html', 1);">[Logon]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/massquote.html', 1);">[MassQuote]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotestatusreport.html', 1);">[QuoteStatusReport]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_no-last-look.html', 1);">[ExecutionReport - no-last-look]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotestatusrequest.html', 1);">[QuoteStatusRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/dontknowtrade.html', 1);">[DontKnowTrade]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/heartbeat.html', 1);">[Heartbeat]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/testrequest.html', 1);">[TestRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/newordersingle.html', 1);">[NewOrderSingle]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quote.html', 1);">[Quote]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/reject.html', 1);">[Reject]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/tradingsessionstatus.html', 1);">[TradingSessionStatus]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/orderstatusrequest.html', 1);">[OrderStatusRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/securitylist.html', 1);">[SecurityList]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionacknowledgement.html', 1);">[ExecutionAcknowledgement]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport.html', 1);">[ExecutionReport]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/massquoteacknowledgement.html', 1);">[MassQuoteAcknowledgement]</a>&nbsp; 
+<h4>Used in Components:</h4>
+</div>
+</body>
+</html>

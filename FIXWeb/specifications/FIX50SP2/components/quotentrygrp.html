@@ -1,0 +1,84 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>QuotEntryGrp</h2>
+    <h3></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/noquoteentries.html', 1)">295</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/noquoteentries.html', 1)">NoQuoteEntries</a></td>
+            <td>Y</td>
+            <td>The number of quotes for this Symbol (instrument) (QuoteSet) that follow in this message.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/quoteentryid.html', 1)">299</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/quoteentryid.html', 1)">QuoteEntryID</a></td>
+            <td>Y</td>
+            <td>Unique identifier for a quote. The QuoteEntryID stays with the quote as a static identifier even if the quote is updated.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bidpx.html', 1)">132</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bidpx.html', 1)">BidPx</a></td>
+            <td>N</td>
+            <td>Bid price/rate<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/offerpx.html', 1)">133</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/offerpx.html', 1)">OfferPx</a></td>
+            <td>N</td>
+            <td>Offer price/rate<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bidsize.html', 1)">134</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bidsize.html', 1)">BidSize</a></td>
+            <td>N</td>
+            <td>Quantity of bid<br/>(Prior to FIX 4.2 this field was of type int)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/offersize.html', 1)">135</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/offersize.html', 1)">OfferSize</a></td>
+            <td>N</td>
+            <td>Quantity of offer<br/>(Prior to FIX 4.2 this field was of type int)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/transacttime.html', 1)">60</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/transacttime.html', 1)">TransactTime</a></td>
+            <td>N</td>
+            <td>Timestamp when the business transaction represented by the message occurred.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate.html', 1)">64</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate.html', 1)">SettlDate</a></td>
+            <td>N</td>
+            <td>Specific date of trade settlement (SettlementDate) in YYYYMMDD format.<br/>If present, this field overrides SettlType (63). This field is required if the value of SettlType (63) is B (Broken Date).<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/currency.html', 1)">15</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/currency.html', 1)">Currency</a></td>
+            <td>N</td>
+            <td>Identifies currency used for Qty. Absence of this field is interpreted as the default (base or left side of the pair). It is recommended that systems provide this currency value to avoid confusion.<br/>Can be used to get all Currency Pairs including THIS currency. E.g. Currency (15) = JPY the response could be USD/JPY; BTC/JPY and ETH/JPY<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bookingtype.html', 1)">775</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/bookingtype.html', 1)">BookingType</a></td>
+            <td>N</td>
+            <td>Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or similar).<br/></td>
+        </tr>
+    </table><h4>Used in Messages:</h4>
+<h4>Used in Components:</h4>
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotsetgrp.html', 1);">[QuotSetGrp]</a>&nbsp; 
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>OrderQtyData</h2>
+    <h3>The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as &quot;required&quot; in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent (in the case of CIV).<br/></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/orderqty.html', 1)">38</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/orderqty.html', 1)">OrderQty</a></td>
+            <td>Y</td>
+            <td>Quantity ordered. This represents the number of shares for equities or par, face or nominal value for FI instruments.<br/>(Prior to FIX 4.2 this field was of type int)<br/></td>
+        </tr>
+    </table><h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoteresponse.html', 1);">[QuoteResponse]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/newordersingle.html', 1);">[NewOrderSingle]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_no-last-look.html', 1);">[ExecutionReport - no-last-look]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_lastlook.html', 1);">[ExecutionReport - lastLook]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/dontknowtrade.html', 1);">[DontKnowTrade]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionacknowledgement.html', 1);">[ExecutionAcknowledgement]</a>&nbsp; 
+<h4>Used in Components:</h4>
+<a href="javascript:void(0);" onClick="loadComponent('../components/sidecrossordmodgrp.html', 1);">[SideCrossOrdModGrp]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotreqgrp.html', 1);">[QuotReqGrp]</a>&nbsp; 
+</div>
+</body>
+</html>

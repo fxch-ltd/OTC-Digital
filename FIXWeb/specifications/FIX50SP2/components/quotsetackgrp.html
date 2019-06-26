@@ -1,0 +1,141 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>QuotSetAckGrp</h2>
+    <h3></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/noquotesets.html', 1)">296</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/noquotesets.html', 1)">NoQuoteSets</a></td>
+            <td>N</td>
+            <td>The number of sets of quotes in the message<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/quotesetid.html', 1)">302</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/quotesetid.html', 1)">QuoteSetID</a></td>
+            <td>N</td>
+            <td>Unique id for the Quote Set.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/totnoquoteentries.html', 1)">304</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/totnoquoteentries.html', 1)">TotNoQuoteEntries</a></td>
+            <td>N</td>
+            <td>Total number of quotes for the quote set.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/totnocxldquotes.html', 1)">1168</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/totnocxldquotes.html', 1)">TotNoCxldQuotes</a></td>
+            <td>N</td>
+            <td>Specifies the number of canceled quotes<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/totnoaccquotes.html', 1)">1169</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/totnoaccquotes.html', 1)">TotNoAccQuotes</a></td>
+            <td>N</td>
+            <td>Specifies the number of accepted quotes<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/totnorejquotes.html', 1)">1170</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/totnorejquotes.html', 1)">TotNoRejQuotes</a></td>
+            <td>N</td>
+            <td>Specifies the number of rejected quotes<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('QuotEntryAckGrp', this.parentNode.parentNode)">QuotEntryAckGrp</a></td>
+            <td>N</td>
+            <td></td>
+        </tr>
+                <tr class="subElement indentLevel1, QuotEntryAckGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/noquoteentries.html', 1);">295</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/noquoteentries.html', 1);">NoQuoteEntries</a>
+                </td>
+                        <td>N</td>
+                <td>The number of quotes for this Symbol (QuoteSet) that follow in this message.<br/></td>
+            </tr>
+                                    <tr class="subElement indentLevel1, QuotEntryAckGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/quoteentryid.html', 1);">299</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/quoteentryid.html', 1);">QuoteEntryID</a>
+                </td>
+                        <td>N</td>
+                <td>Unique identifier for a quote. The QuoteEntryID stays with the quote as a static identifier even if the quote is updated.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, QuotEntryAckGrp">
+                                <td><a href="javascript:void(0);" onClick="expand('Instrument', this.parentNode.parentNode);">Component</a></td>
+                <td><a href="javascript:void(0);" onClick="loadComponent('../components/instrument.html',1)">Instrument</a></td>
+                                    <td>N</td>
+                <td>The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block can be used to describe any asset type supported by FIX.<br/></td>
+            </tr>
+                                    <tr class="subElement indentLevel2, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1);">55</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1);">Symbol</a>
+                </td>
+                        <td>N</td>
+                <td>Symbol: common, &quot;human understood&quot; representation of the Instrument. E.g. BTCUSD or XRPJPY<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel2, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1);">167</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1);">SecurityType</a>
+                </td>
+                        <td>N</td>
+                <td>Indicates type of security. Security type enumerations are grouped by Product(460) field value. NOTE: Additional values may be used by mutual agreement of the counterparties.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel2, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1);">969</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1);">MinPriceIncrement</a>
+                </td>
+                        <td>N</td>
+                <td>Minimum price increase supported by system, ECN for a given Instrument<br/></td>
+            </tr>
+                                    <tr class="subElement indentLevel1, QuotEntryAckGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/quoteentrystatus.html', 1);">1167</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/quoteentrystatus.html', 1);">QuoteEntryStatus</a>
+                </td>
+                        <td>N</td>
+                <td>Identifies the status of an individual quote. See also QuoteStatus(297) which is used for single Quotes.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, QuotEntryAckGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/quoteentryrejectreason.html', 1);">368</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/quoteentryrejectreason.html', 1);">QuoteEntryRejectReason</a>
+                </td>
+                        <td>N</td>
+                <td>Reason Quote Entry was rejected:<br/></td>
+            </tr>
+                            </table><h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/massquoteacknowledgement.html', 1);">[MassQuoteAcknowledgement]</a>&nbsp; 
+<h4>Used in Components:</h4>
+</div>
+</body>
+</html>

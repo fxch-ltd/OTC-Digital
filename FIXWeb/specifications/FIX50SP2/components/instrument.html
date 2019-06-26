@@ -1,0 +1,57 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>Instrument</h2>
+    <h3>The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block can be used to describe any asset type supported by FIX.<br/></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1)">55</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1)">Symbol</a></td>
+            <td>N</td>
+            <td>Symbol: common, &quot;human understood&quot; representation of the Instrument. E.g. BTCUSD or XRPJPY<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1)">167</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1)">SecurityType</a></td>
+            <td>N</td>
+            <td>Indicates type of security. Security type enumerations are grouped by Product(460) field value. NOTE: Additional values may be used by mutual agreement of the counterparties.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1)">969</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1)">MinPriceIncrement</a></td>
+            <td>N</td>
+            <td>Minimum price increase supported by system, ECN for a given Instrument<br/></td>
+        </tr>
+    </table><h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotestatusreport.html', 1);">[QuoteStatusReport]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoteresponse.html', 1);">[QuoteResponse]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_no-last-look.html', 1);">[ExecutionReport - no-last-look]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_lastlook.html', 1);">[ExecutionReport - lastLook]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quotestatusrequest.html', 1);">[QuoteStatusRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/dontknowtrade.html', 1);">[DontKnowTrade]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/newordersingle.html', 1);">[NewOrderSingle]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quote.html', 1);">[Quote]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/orderstatusrequest.html', 1);">[OrderStatusRequest]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionacknowledgement.html', 1);">[ExecutionAcknowledgement]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport.html', 1);">[ExecutionReport]</a>&nbsp; 
+<h4>Used in Components:</h4>
+<a href="javascript:void(0);" onClick="loadComponent('../components/seclistgrp.html', 1);">[SecListGrp]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotcxlentriesgrp.html', 1);">[QuotCxlEntriesGrp]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotreqrjctgrp.html', 1);">[QuotReqRjctGrp]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotreqgrp.html', 1);">[QuotReqGrp]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotentryackgrp.html', 1);">[QuotEntryAckGrp]</a>&nbsp; 
+</div>
+</body>
+</html>

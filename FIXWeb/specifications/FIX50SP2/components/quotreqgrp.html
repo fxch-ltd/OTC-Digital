@@ -1,0 +1,236 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>QuotReqGrp</h2>
+    <h3></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/norelatedsym.html', 1)">146</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/norelatedsym.html', 1)">NoRelatedSym</a></td>
+            <td>Y</td>
+            <td>Number of related symbols (instruments) in Request<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('Instrument', this.parentNode.parentNode)">Instrument</a></td>
+            <td>Y</td>
+            <td>The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block can be used to describe any asset type supported by FIX.<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1);">55</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/symbol.html', 1);">Symbol</a>
+                </td>
+                        <td>N</td>
+                <td>Symbol: common, &quot;human understood&quot; representation of the Instrument. E.g. BTCUSD or XRPJPY<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1);">167</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/securitytype.html', 1);">SecurityType</a>
+                </td>
+                        <td>N</td>
+                <td>Indicates type of security. Security type enumerations are grouped by Product(460) field value. NOTE: Additional values may be used by mutual agreement of the counterparties.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, Instrument">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1);">969</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/minpriceincrement.html', 1);">MinPriceIncrement</a>
+                </td>
+                        <td>N</td>
+                <td>Minimum price increase supported by system, ECN for a given Instrument<br/></td>
+            </tr>
+                    <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/quotetype.html', 1)">537</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/quotetype.html', 1)">QuoteType</a></td>
+            <td>N</td>
+            <td>Identifies the type of quote.<br/>With indicative quotes, the LP has a &quot;last look&quot; option and the right to reject. The LP will send an Execution Report in response to an Order.<br/>A tradeable quote will result directly in a trade without a last look option. LP will receive an Execution Report directly (no Order).<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/side.html', 1)">54</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/side.html', 1)">Side</a></td>
+            <td>N</td>
+            <td>Side of order (see Volume : &quot;Glossary&quot; for value definitions)<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('OrderQtyData', this.parentNode.parentNode)">OrderQtyData</a></td>
+            <td>Y</td>
+            <td>The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as &quot;required&quot; in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent (in the case of CIV).<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, OrderQtyData">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/orderqty.html', 1);">38</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/orderqty.html', 1);">OrderQty</a>
+                </td>
+                        <td>Y</td>
+                <td>Quantity ordered. This represents the number of shares for equities or par, face or nominal value for FI instruments.<br/>(Prior to FIX 4.2 this field was of type int)<br/></td>
+            </tr>
+                    <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settltype.html', 1)">63</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settltype.html', 1)">SettlType</a></td>
+            <td>N</td>
+            <td>Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for SettlType (63) is 0 (Regular)<br/>Regular is defined as the default settlement period for the particular security.<br/>Additionally the following patterns may be uses as well as enum values<br/>Dx = FX tenor expression for &quot;days&quot;, e.g. &quot;D5&quot;, where &quot;x&quot; is any integer &gt; 0<br/>Wx = FX tenor expression for &quot;weeks&quot;, e.g. &quot;W13&quot;, where &quot;x&quot; is any integer &gt; 0<br/>Noted that tenors expressed using Dx, and Wx values do not denote business days, but calendar days.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate.html', 1)">64</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate.html', 1)">SettlDate</a></td>
+            <td>N</td>
+            <td>Specific date of trade settlement (SettlementDate) in YYYYMMDD format.<br/>If present, this field overrides SettlType (63). This field is required if the value of SettlType (63) is B (Broken Date).<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate2.html', 1)">193</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/settldate2.html', 1)">SettlDate2</a></td>
+            <td>N</td>
+            <td>SettlDate (64) of the far leg part of an F/X swap order.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/orderqty2.html', 1)">192</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/orderqty2.html', 1)">OrderQty2</a></td>
+            <td>N</td>
+            <td>OrderQty (38) of the future part of a F/X swap order.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/currency.html', 1)">15</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/currency.html', 1)">Currency</a></td>
+            <td>N</td>
+            <td>Identifies currency used for Qty. Absence of this field is interpreted as the default (base or left side of the pair). It is recommended that systems provide this currency value to avoid confusion.<br/>Can be used to get all Currency Pairs including THIS currency. E.g. Currency (15) = JPY the response could be USD/JPY; BTC/JPY and ETH/JPY<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/account.html', 1)">1</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/account.html', 1)">Account</a></td>
+            <td>N</td>
+            <td>Account mnemonic as agreed between Clearing and institution.<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('QuotQualGrp', this.parentNode.parentNode)">QuotQualGrp</a></td>
+            <td>N</td>
+            <td></td>
+        </tr>
+                <tr class="subElement indentLevel1, QuotQualGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/noquotequalifiers.html', 1);">735</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/noquotequalifiers.html', 1);">NoQuoteQualifiers</a>
+                </td>
+                        <td>N</td>
+                <td></td>
+            </tr>
+                                    <tr class="subElement indentLevel1, QuotQualGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/quotequalifier.html', 1);">695</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/quotequalifier.html', 1);">QuoteQualifier</a>
+                </td>
+                        <td>N</td>
+                <td>Code to qualify Quote use<br/>See IOIQualifier (104) for description and valid values.<br/></td>
+            </tr>
+                                <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/expiretime.html', 1)">126</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/expiretime.html', 1)">ExpireTime</a></td>
+            <td>N</td>
+            <td>Time/Date of expiration (always expressed in UTC (Universal Time Coordinated, also known as &quot;GMT&quot;)<br/>For Quotes - this is the expiration of the quote.<br/>Expiration time is provided across the quote message dialog to control the length of time of the overall quoting process.<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/transacttime.html', 1)">60</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/transacttime.html', 1)">TransactTime</a></td>
+            <td>Y</td>
+            <td>Timestamp when the business transaction represented by the message occurred.<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('Parties', this.parentNode.parentNode)">Parties</a></td>
+            <td>N</td>
+            <td>The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the PartyRole field and identifies the source of the PartyID through the the PartyIDSource.<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, Parties">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/nopartyids.html', 1);">453</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/nopartyids.html', 1);">NoPartyIDs</a>
+                </td>
+                        <td>N</td>
+                <td>Repeating group below should contain unique combinations of PartyID, PartyIDSource, and PartyRole<br/></td>
+            </tr>
+                                    <tr class="subElement indentLevel1, Parties">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partyid.html', 1);">448</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partyid.html', 1);">PartyID</a>
+                </td>
+                        <td>N</td>
+                <td>Party identifier/code. See PartyIDSource (447) and PartyRole (452).<br/>See &quot;Appendix 6-G - Use of &lt;Parties&gt; Component Block&quot;<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, Parties">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partyrole.html', 1);">452</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partyrole.html', 1);">PartyRole</a>
+                </td>
+                        <td>N</td>
+                <td>Identifies the type or role of the PartyID (448) specified.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel1, Parties">
+                                <td><a href="javascript:void(0);" onClick="expand('PtysSubGrp', this.parentNode.parentNode);">Component</a></td>
+                <td><a href="javascript:void(0);" onClick="loadComponent('../components/ptyssubgrp.html',1)">PtysSubGrp</a></td>
+                                    <td>N</td>
+                <td></td>
+            </tr>
+                                    <tr class="subElement indentLevel2, PtysSubGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/nopartysubids.html', 1);">802</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/nopartysubids.html', 1);">NoPartySubIDs</a>
+                </td>
+                        <td>N</td>
+                <td></td>
+            </tr>
+                                    <tr class="subElement indentLevel2, PtysSubGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partysubid.html', 1);">523</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partysubid.html', 1);">PartySubID</a>
+                </td>
+                        <td>N</td>
+                <td>Sub-identifier (e.g. Clearing Account for PartyRole (452)=Clearing Firm, Locate ID # for PartyRole=Locate/Lending Firm, etc). Not required when using PartyID (448), PartyIDSource (447), and PartyRole.<br/></td>
+            </tr>
+                        <tr class="subElement indentLevel2, PtysSubGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partysubidtype.html', 1);">803</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/partysubidtype.html', 1);">PartySubIDType</a>
+                </td>
+                        <td>N</td>
+                <td>Type of PartySubID (523) value<br/>4000+ = Reserved and available for bi-laterally agreed upon user defined values<br/></td>
+            </tr>
+                                                    </table><h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoterequest.html', 1);">[QuoteRequest]</a>&nbsp; 
+<h4>Used in Components:</h4>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>UnderlyingInstrument</h2>
+    <h3>The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the UnderlyingInstrument component block it describes an instrument which underlies the primary instrument Refer to the Instrument component block comments as this component block mirrors Instrument, except for the noted fields.<br/></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/underlyingsymbol.html', 1)">311</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/underlyingsymbol.html', 1)">UnderlyingSymbol</a></td>
+            <td>N</td>
+            <td>Underlying security's Symbol.<br/>See Symbol (55) field for description<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('UndSecAltIDGrp', this.parentNode.parentNode)">UndSecAltIDGrp</a></td>
+            <td>N</td>
+            <td></td>
+        </tr>
+                <tr class="subElement indentLevel1, UndSecAltIDGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/nounderlyingsecurityaltid.html', 1);">457</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/nounderlyingsecurityaltid.html', 1);">NoUnderlyingSecurityAltID</a>
+                </td>
+                        <td>N</td>
+                <td></td>
+            </tr>
+                                    <tr class="subElement indentLevel1, UndSecAltIDGrp">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/underlyingsecurityaltid.html', 1);">458</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/underlyingsecurityaltid.html', 1);">UnderlyingSecurityAltID</a>
+                </td>
+                        <td>N</td>
+                <td>Alternate Security identifier value for this underlying security of UnderlyingSecurityAltIDSource (459) type (e.g. CUSIP, SEDOL, ISIN, etc). Requires UnderlyingSecurityAltIDSource.<br/></td>
+            </tr>
+                            </table><h4>Used in Messages:</h4>
+<h4>Used in Components:</h4>
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotsetgrp.html', 1);">[QuotSetGrp]</a>&nbsp; 
+</div>
+</body>
+</html>

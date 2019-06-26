@@ -1,0 +1,42 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>RootParties</h2>
+    <h3>The RootParties component block is a version of the Parties component block used to provide root information regarding the owning and entering parties of a transaction.<br/></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/norootpartyids.html', 1)">1116</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/norootpartyids.html', 1)">NoRootPartyIDs</a></td>
+            <td>N</td>
+            <td>Repeating group below should contain unique combinations of RootPartyID, RootPartyIDSource, and RootPartyRole<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/rootpartyid.html', 1)">1117</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/rootpartyid.html', 1)">RootPartyID</a></td>
+            <td>N</td>
+            <td>PartyID value within a root parties component. Same values as PartyID (448)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/rootpartyrole.html', 1)">1119</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/rootpartyrole.html', 1)">RootPartyRole</a></td>
+            <td>N</td>
+            <td>PartyRole value within a root parties component. Same values as PartyRole (452)<br/></td>
+        </tr>
+    </table><h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoterequest.html', 1);">[QuoteRequest]</a>&nbsp; 
+<h4>Used in Components:</h4>
+</div>
+</body>
+</html>

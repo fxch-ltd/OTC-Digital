@@ -1,0 +1,56 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="group">
+<div class="message">
+    <img src='../../../img/component.png' />
+    <h2>SideCrossOrdModGrp</h2>
+    <h3></h3>
+    <table class="groupTable">
+        <tr>
+            <th width="75">Tag</th>
+            <th width="200">Name</th>
+            <th>Req'd</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/nosides.html', 1)">552</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/nosides.html', 1)">NoSides</a></td>
+            <td>Y</td>
+            <td>Must be 1 or 2<br/>1 or 2 if CrossType=1<br/>2 otherwise<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/side.html', 1)">54</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/side.html', 1)">Side</a></td>
+            <td>Y</td>
+            <td>Side of order (see Volume : &quot;Glossary&quot; for value definitions)<br/></td>
+        </tr>
+        <tr>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/clordid.html', 1)">11</a></td>
+            <td><a href="javascript:void(0);" onClick="loadField('../fields/clordid.html', 1)">ClOrdID</a></td>
+            <td>Y</td>
+            <td>Assigned by the Broker or firm which originated the order. Used to propagate the ClOrdID (11) used by the exchange, ECN or system.<br/>For Fills of no-last-look Quotes, this message will refer to the Executed Quote. Mapped to:<br/>- QuoteMsgID(1166) of a single Quote<br/>- QuoteID(117) of a Mass Quote.<br/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="javascript:void(0);" onClick="expand('OrderQtyData', this.parentNode.parentNode)">OrderQtyData</a></td>
+            <td>Y</td>
+            <td>The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as &quot;required&quot; in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent (in the case of CIV).<br/></td>
+        </tr>
+                <tr class="subElement indentLevel1, OrderQtyData">
+                                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/orderqty.html', 1);">38</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" onClick="loadField('../fields/orderqty.html', 1);">OrderQty</a>
+                </td>
+                        <td>Y</td>
+                <td>Quantity ordered. This represents the number of shares for equities or par, face or nominal value for FI instruments.<br/>(Prior to FIX 4.2 this field was of type int)<br/></td>
+            </tr>
+                </table><h4>Used in Messages:</h4>
+<h4>Used in Components:</h4>
+</div>
+</body>
+</html>
