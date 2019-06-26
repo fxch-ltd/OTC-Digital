@@ -1,0 +1,40 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="field">
+<div class="field">
+    <div class="top"><div></div></div>
+        <div class="content">
+<img src="../../../img/field.png" height="32"/>
+<a href="javascript:void(0);" onClick="hideFieldPanel()" style="float: right;">[Hide]</a>
+<h2>CrossType (549)</h2>
+<h3>Type of cross being submitted to a market<br/></h3>
+<p>Type: int</p>
+<table class="enums">
+    <tr>
+        <td>1</td>
+        <td>Cross AON - cross trade which is executed completely or not. Both sides are treated in the same manner. This is equivalent to an &quot;All or None&quot;.<br/></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Cross IOC - cross trade which is executed partially and the rest is cancelled. One side is fully executed, the other side is partially executed with the remainder being cancelled. This is equivalent to an IOC on the other side. Note: CrossPrioritization(550) field may be used to indicate which side should fully execute in this scenario.<br/></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Cross One Side - cross trade which is partially executed with the unfilled portions remaining active. One side of the cross is fully executed (as denoted by the CrossPrioritization (550) field), but the unfilled portion remains active.<br/></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Cross Same Price - cross trade is executed with existing orders with the same price. In this case other orders exist with the same price, the quantity of the Cross is executed against the existing orders and quotes, the remainder of the cross is executed against the other side of the cross. The two sides potentially have different quantities.<br/></td>
+    </tr>
+</table>
+<h4>Used in Messages:</h4>
+<h4>Used in Components:</h4>
+        </div>
+    <div class="bottom"><div></div></div>
+</div>
+</body>
+</html>
