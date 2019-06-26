@@ -1,0 +1,410 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="mktree.css"/>
+    <link rel="stylesheet" href="userstyle.css"/>
+    <script language="javascript" src="js/externals.js"></script>
+    <script language="javascript" src="js/browser.js"></script>
+    <script language="javascript" src="js/nav.js"></script>
+</head>
+
+<body onload="registerSearch();" id="specBrowser">
+    <span>Search: <input id="searchBar" type="text" /><img id="searchSpinner" src="img/spinner.gif" height=14/></span>
+    <div id="searchResults">
+    results
+    </div>
+    <ul id="navigationPanel" class="mktree">
+        <li class="liClosed"><ul></ul></li> <!-- IE hack -->
+        <li class="liClosed">
+            <img src="img/message.png" width="24" style="margin-right: 5px;"/>
+            <a href="#" onClick="loadByName('messagesbyname.html',0);">Messages</a>
+            <ul>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/heartbeat.html', 1)">Heartbeat (0)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/testrequest.html', 1)">TestRequest (1)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/resendrequest.html', 1)">ResendRequest (2)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/reject.html', 1)">Reject (3)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/sequencereset.html', 1)">SequenceReset (4)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/logout.html', 1)">Logout (5)</a>
+                </li>
+                <li class="liClosed">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/executionreport.html', 1)">ExecutionReport (8)</a>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/executionreport_lastlook.html', 1)">
+                                lastLook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/executionreport_no-last-look.html', 1)">
+                                no-last-look
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/logon.html', 1)">Logon (A)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/newordersingle.html', 1)">NewOrderSingle (D)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/orderstatusrequest.html', 1)">OrderStatusRequest (H)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/dontknowtrade.html', 1)">DontKnowTrade (Q)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/quoterequest.html', 1)">QuoteRequest (R)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/quote.html', 1)">Quote (S)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/quotecancel.html', 1)">QuoteCancel (Z)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/quotestatusrequest.html', 1)">QuoteStatusRequest (a)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/massquoteacknowledgement.html', 1)">MassQuoteAcknowledgement (b)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/tradingsessionstatusrequest.html', 1)">TradingSessionStatusRequest (g)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/tradingsessionstatus.html', 1)">TradingSessionStatus (h)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/massquote.html', 1)">MassQuote (i)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/businessmessagereject.html', 1)">BusinessMessageReject (j)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/securitylistrequest.html', 1)">SecurityListRequest (x)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/securitylist.html', 1)">SecurityList (y)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/quoterequestreject.html', 1)">QuoteRequestReject (AG)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/quotestatusreport.html', 1)">QuoteStatusReport (AI)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/quoteresponse.html', 1)">QuoteResponse (AJ)</a>
+                </li>
+                <li class="liBullet">
+                    <a href="javascript:void(0);" onClick="loadMessage('specifications/FIX50SP2/messages/executionacknowledgement.html', 1)">ExecutionAcknowledgement (BN)</a>
+                </li>
+            </ul>
+        </li><br/>
+        <li class="liClosed">
+            <img src="img/component.png" width="24" style="margin-right: 5px;"/>
+            <a href="#" onClick="loadByName('componentsbyname.html',0);">Components</a>
+            <ul>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/commissiondata.html', 1)">CommissionData</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/instrument.html', 1)">Instrument</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/instrumentleg.html', 1)">InstrumentLeg</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/orderqtydata.html', 1)">OrderQtyData</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/ptyssubgrp.html', 1)">PtysSubGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/parties.html', 1)">Parties</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/positionqty.html', 1)">PositionQty</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/stipulations.html', 1)">Stipulations</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/undsecaltidgrp.html', 1)">UndSecAltIDGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/underlyinginstrument.html', 1)">UnderlyingInstrument</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/standardheader.html', 1)">StandardHeader</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/standardtrailer.html', 1)">StandardTrailer</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/linesoftextgrp.html', 1)">LinesOfTextGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/quotcxlentriesgrp.html', 1)">QuotCxlEntriesGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/quotentryackgrp.html', 1)">QuotEntryAckGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/quotentrygrp.html', 1)">QuotEntryGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/quotqualgrp.html', 1)">QuotQualGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/quotreqgrp.html', 1)">QuotReqGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/quotreqrjctgrp.html', 1)">QuotReqRjctGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/quotsetackgrp.html', 1)">QuotSetAckGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/quotsetgrp.html', 1)">QuotSetGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/seclistgrp.html', 1)">SecListGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/sidecrossordmodgrp.html', 1)">SideCrossOrdModGrp</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/rootparties.html', 1)">RootParties</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadComponent('specifications/FIX50SP2/components/trdsesslstgrp.html', 1)">TrdSessLstGrp</a></li>
+            </ul>
+        </li><br/>
+        <li class="liClosed">
+            <img src="img/field.png" width="24" style="margin-right: 5px;"/>
+            <a href='javascript:void(0);' onClick="loadByName('fieldsbytag.html',0);">Fields</a>
+            <ul>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/account.html', 1)">Account (1)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/avgpx.html', 1)">AvgPx (6)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/beginseqno.html', 1)">BeginSeqNo (7)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/beginstring.html', 1)">BeginString (8)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/bodylength.html', 1)">BodyLength (9)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/checksum.html', 1)">CheckSum (10)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/clordid.html', 1)">ClOrdID (11)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/commission.html', 1)">Commission (12)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/commtype.html', 1)">CommType (13)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/cumqty.html', 1)">CumQty (14)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/currency.html', 1)">Currency (15)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/endseqno.html', 1)">EndSeqNo (16)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/execid.html', 1)">ExecID (17)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/execinst.html', 1)">ExecInst (18)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/ioiid.html', 1)">IOIID (23)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/lastpx.html', 1)">LastPx (31)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/lastqty.html', 1)">LastQty (32)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nolinesoftext.html', 1)">NoLinesOfText (33)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/msgseqnum.html', 1)">MsgSeqNum (34)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/msgtype.html', 1)">MsgType (35)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/newseqno.html', 1)">NewSeqNo (36)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/orderid.html', 1)">OrderID (37)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/orderqty.html', 1)">OrderQty (38)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/ordstatus.html', 1)">OrdStatus (39)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/ordtype.html', 1)">OrdType (40)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/possdupflag.html', 1)">PossDupFlag (43)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/price.html', 1)">Price (44)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/refseqnum.html', 1)">RefSeqNum (45)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/sendercompid.html', 1)">SenderCompID (49)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/sendersubid.html', 1)">SenderSubID (50)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/sendingtime.html', 1)">SendingTime (52)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quantity.html', 1)">Quantity (53)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/side.html', 1)">Side (54)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/symbol.html', 1)">Symbol (55)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/targetcompid.html', 1)">TargetCompID (56)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/targetsubid.html', 1)">TargetSubID (57)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/text.html', 1)">Text (58)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/timeinforce.html', 1)">TimeInForce (59)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/transacttime.html', 1)">TransactTime (60)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/validuntiltime.html', 1)">ValidUntilTime (62)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/settltype.html', 1)">SettlType (63)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/settldate.html', 1)">SettlDate (64)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/listid.html', 1)">ListID (66)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/totnoorders.html', 1)">TotNoOrders (68)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/allocid.html', 1)">AllocID (70)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/alloctranstype.html', 1)">AllocTransType (71)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/noorders.html', 1)">NoOrders (73)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/tradedate.html', 1)">TradeDate (75)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/allocaccount.html', 1)">AllocAccount (79)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/allocqty.html', 1)">AllocQty (80)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/rptseq.html', 1)">RptSeq (83)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/allocstatus.html', 1)">AllocStatus (87)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/signature.html', 1)">Signature (89)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securedatalen.html', 1)">SecureDataLen (90)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securedata.html', 1)">SecureData (91)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/signaturelength.html', 1)">SignatureLength (93)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/emailtype.html', 1)">EmailType (94)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/rawdatalength.html', 1)">RawDataLength (95)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/rawdata.html', 1)">RawData (96)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/possresend.html', 1)">PossResend (97)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/encryptmethod.html', 1)">EncryptMethod (98)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/heartbtint.html', 1)">HeartBtInt (108)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/minqty.html', 1)">MinQty (110)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/testreqid.html', 1)">TestReqID (112)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/onbehalfofcompid.html', 1)">OnBehalfOfCompID (115)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/onbehalfofsubid.html', 1)">OnBehalfOfSubID (116)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quoteid.html', 1)">QuoteID (117)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/netmoney.html', 1)">NetMoney (118)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/origsendingtime.html', 1)">OrigSendingTime (122)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/gapfillflag.html', 1)">GapFillFlag (123)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/expiretime.html', 1)">ExpireTime (126)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/dkreason.html', 1)">DKReason (127)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/delivertocompid.html', 1)">DeliverToCompID (128)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/delivertosubid.html', 1)">DeliverToSubID (129)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quotereqid.html', 1)">QuoteReqID (131)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/bidpx.html', 1)">BidPx (132)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/offerpx.html', 1)">OfferPx (133)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/bidsize.html', 1)">BidSize (134)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/offersize.html', 1)">OfferSize (135)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/resetseqnumflag.html', 1)">ResetSeqNumFlag (141)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/senderlocationid.html', 1)">SenderLocationID (142)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/targetlocationid.html', 1)">TargetLocationID (143)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/onbehalfoflocationid.html', 1)">OnBehalfOfLocationID (144)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/delivertolocationid.html', 1)">DeliverToLocationID (145)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/norelatedsym.html', 1)">NoRelatedSym (146)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/subject.html', 1)">Subject (147)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/headline.html', 1)">Headline (148)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/exectype.html', 1)">ExecType (150)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/leavesqty.html', 1)">LeavesQty (151)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/settlinstmode.html', 1)">SettlInstMode (160)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/emailthreadid.html', 1)">EmailThreadID (164)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securitytype.html', 1)">SecurityType (167)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/bidspotrate.html', 1)">BidSpotRate (188)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/bidforwardpoints.html', 1)">BidForwardPoints (189)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/offerspotrate.html', 1)">OfferSpotRate (190)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/offerforwardpoints.html', 1)">OfferForwardPoints (191)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/orderqty2.html', 1)">OrderQty2 (192)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/settldate2.html', 1)">SettlDate2 (193)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/lastspotrate.html', 1)">LastSpotRate (194)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/lastforwardpoints.html', 1)">LastForwardPoints (195)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/secondaryorderid.html', 1)">SecondaryOrderID (198)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/xmldatalen.html', 1)">XmlDataLen (212)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/xmldata.html', 1)">XmlData (213)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nostipulations.html', 1)">NoStipulations (232)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/mdreqid.html', 1)">MDReqID (262)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/subscriptionrequesttype.html', 1)">SubscriptionRequestType (263)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/marketdepth.html', 1)">MarketDepth (264)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nomdentrytypes.html', 1)">NoMDEntryTypes (267)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nomdentries.html', 1)">NoMDEntries (268)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/mdentrytype.html', 1)">MDEntryType (269)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/noquoteentries.html', 1)">NoQuoteEntries (295)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/noquotesets.html', 1)">NoQuoteSets (296)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quotestatus.html', 1)">QuoteStatus (297)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quotecanceltype.html', 1)">QuoteCancelType (298)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quoteentryid.html', 1)">QuoteEntryID (299)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quoterejectreason.html', 1)">QuoteRejectReason (300)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quoteresponselevel.html', 1)">QuoteResponseLevel (301)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quotesetid.html', 1)">QuoteSetID (302)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/totnoquoteentries.html', 1)">TotNoQuoteEntries (304)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/underlyingsymbol.html', 1)">UnderlyingSymbol (311)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securityreqid.html', 1)">SecurityReqID (320)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securityresponseid.html', 1)">SecurityResponseID (322)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securityresponsetype.html', 1)">SecurityResponseType (323)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securitystatusreqid.html', 1)">SecurityStatusReqID (324)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/unsolicitedindicator.html', 1)">UnsolicitedIndicator (325)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/tradsesreqid.html', 1)">TradSesReqID (335)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/tradingsessionid.html', 1)">TradingSessionID (336)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/tradsesstatus.html', 1)">TradSesStatus (340)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/messageencoding.html', 1)">MessageEncoding (347)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quotesetvaliduntiltime.html', 1)">QuoteSetValidUntilTime (367)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quoteentryrejectreason.html', 1)">QuoteEntryRejectReason (368)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/lastmsgseqnumprocessed.html', 1)">LastMsgSeqNumProcessed (369)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/refmsgtype.html', 1)">RefMsgType (372)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/sessionrejectreason.html', 1)">SessionRejectReason (373)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/businessrejectreason.html', 1)">BusinessRejectReason (380)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/grosstradeamt.html', 1)">GrossTradeAmt (381)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/notradingsessions.html', 1)">NoTradingSessions (386)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/clientbidid.html', 1)">ClientBidID (391)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/totnorelatedsym.html', 1)">TotNoRelatedSym (393)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/bidtype.html', 1)">BidType (394)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nobidcomponents.html', 1)">NoBidComponents (420)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nostrikes.html', 1)">NoStrikes (428)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/partyid.html', 1)">PartyID (448)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/partyrole.html', 1)">PartyRole (452)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nopartyids.html', 1)">NoPartyIDs (453)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nounderlyingsecurityaltid.html', 1)">NoUnderlyingSecurityAltID (457)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/underlyingsecurityaltid.html', 1)">UnderlyingSecurityAltID (458)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/product.html', 1)">Product (460)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/testmessageindicator.html', 1)">TestMessageIndicator (464)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/commcurrency.html', 1)">CommCurrency (479)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/registstatus.html', 1)">RegistStatus (506)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/registrefid.html', 1)">RegistRefID (508)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/registid.html', 1)">RegistID (513)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/registtranstype.html', 1)">RegistTransType (514)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/partysubid.html', 1)">PartySubID (523)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/secondaryclordid.html', 1)">SecondaryClOrdID (526)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/ordercapacity.html', 1)">OrderCapacity (528)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/masscancelrequesttype.html', 1)">MassCancelRequestType (530)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quotetype.html', 1)">QuoteType (537)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/cashmargin.html', 1)">CashMargin (544)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/crossid.html', 1)">CrossID (548)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/crosstype.html', 1)">CrossType (549)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/crossprioritization.html', 1)">CrossPrioritization (550)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/origcrossid.html', 1)">OrigCrossID (551)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nosides.html', 1)">NoSides (552)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/username.html', 1)">Username (553)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nolegs.html', 1)">NoLegs (555)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securitylistrequesttype.html', 1)">SecurityListRequestType (559)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securityrequestresult.html', 1)">SecurityRequestResult (560)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/traderequestid.html', 1)">TradeRequestID (568)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/traderequesttype.html', 1)">TradeRequestType (569)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/massstatusreqid.html', 1)">MassStatusReqID (584)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/alloctype.html', 1)">AllocType (626)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/midpx.html', 1)">MidPx (631)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/bidforwardpoints2.html', 1)">BidForwardPoints2 (642)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/offerforwardpoints2.html', 1)">OfferForwardPoints2 (643)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/rfqreqid.html', 1)">RFQReqID (644)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quotestatusreqid.html', 1)">QuoteStatusReqID (649)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/settlcurrbidfxrate.html', 1)">SettlCurrBidFxRate (656)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quoterequestrejectreason.html', 1)">QuoteRequestRejectReason (658)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/confirmid.html', 1)">ConfirmID (664)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quoterespid.html', 1)">QuoteRespID (693)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quoteresptype.html', 1)">QuoteRespType (694)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quotequalifier.html', 1)">QuoteQualifier (695)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nopositions.html', 1)">NoPositions (702)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/postranstype.html', 1)">PosTransType (709)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/posreqid.html', 1)">PosReqID (710)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/posmaintaction.html', 1)">PosMaintAction (712)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/clearingbusinessdate.html', 1)">ClearingBusinessDate (715)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/posmaintrptid.html', 1)">PosMaintRptID (721)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/posreqtype.html', 1)">PosReqType (724)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/posreqresult.html', 1)">PosReqResult (728)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/noquotequalifiers.html', 1)">NoQuoteQualifiers (735)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/allocreportid.html', 1)">AllocReportID (755)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/confirmtype.html', 1)">ConfirmType (773)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/bookingtype.html', 1)">BookingType (775)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/ordstatusreqid.html', 1)">OrdStatusReqID (790)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/settlinstreqid.html', 1)">SettlInstReqID (791)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/allocreporttype.html', 1)">AllocReportType (794)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nopartysubids.html', 1)">NoPartySubIDs (802)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/partysubidtype.html', 1)">PartySubIDType (803)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/confirmreqid.html', 1)">ConfirmReqID (859)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nocapacities.html', 1)">NoCapacities (862)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/collreqid.html', 1)">CollReqID (894)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/collasgnreason.html', 1)">CollAsgnReason (895)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/collasgnid.html', 1)">CollAsgnID (902)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/collasgntranstype.html', 1)">CollAsgnTransType (903)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/collinquiryid.html', 1)">CollInquiryID (909)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/userrequestid.html', 1)">UserRequestID (923)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/userstatus.html', 1)">UserStatus (926)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/refcompid.html', 1)">RefCompID (930)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/networkrequestid.html', 1)">NetworkRequestID (933)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nocompids.html', 1)">NoCompIDs (936)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securityreportid.html', 1)">SecurityReportID (964)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/minpriceincrement.html', 1)">MinPriceIncrement (969)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/noexpiration.html', 1)">NoExpiration (981)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/manualorderindicator.html', 1)">ManualOrderIndicator (1028)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/custdirectedorder.html', 1)">CustDirectedOrder (1029)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/execackstatus.html', 1)">ExecAckStatus (1036)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/bidswappoints.html', 1)">BidSwapPoints (1065)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/offerswappoints.html', 1)">OfferSwapPoints (1066)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/lastswappoints.html', 1)">LastSwapPoints (1071)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/norootpartyids.html', 1)">NoRootPartyIDs (1116)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/rootpartyid.html', 1)">RootPartyID (1117)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/rootpartyrole.html', 1)">RootPartyRole (1119)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/applverid.html', 1)">ApplVerID (1128)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/cstmapplverid.html', 1)">CstmApplVerID (1129)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/defaultapplverid.html', 1)">DefaultApplVerID (1137)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/applextid.html', 1)">ApplExtID (1156)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/nosettloblig.html', 1)">NoSettlOblig (1165)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quotemsgid.html', 1)">QuoteMsgID (1166)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/quoteentrystatus.html', 1)">QuoteEntryStatus (1167)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/totnocxldquotes.html', 1)">TotNoCxldQuotes (1168)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/totnoaccquotes.html', 1)">TotNoAccQuotes (1169)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/totnorejquotes.html', 1)">TotNoRejQuotes (1170)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/privatequote.html', 1)">PrivateQuote (1171)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/settlmethod.html', 1)">SettlMethod (1193)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/marketid.html', 1)">MarketID (1301)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/applreqid.html', 1)">ApplReqID (1346)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/applreqtype.html', 1)">ApplReqType (1347)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/tradsesevent.html', 1)">TradSesEvent (1368)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/massactionreportid.html', 1)">MassActionReportID (1369)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/massactiontype.html', 1)">MassActionType (1373)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/massactionscope.html', 1)">MassActionScope (1374)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/marketreqid.html', 1)">MarketReqID (1393)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/marketreportid.html', 1)">MarketReportID (1394)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/encryptedpasswordmethod.html', 1)">EncryptedPasswordMethod (1400)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/encryptedpasswordlen.html', 1)">EncryptedPasswordLen (1401)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/encryptedpassword.html', 1)">EncryptedPassword (1402)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/sessionstatus.html', 1)">SessionStatus (1409)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securitylistid.html', 1)">SecurityListID (1465)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/securitylisttype.html', 1)">SecurityListType (1470)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/streamasgnreqid.html', 1)">StreamAsgnReqID (1497)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/streamasgnreqtype.html', 1)">StreamAsgnReqType (1498)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/noasgnreqs.html', 1)">NoAsgnReqs (1499)</a></li>
+                <li class="liBullet"><a href="javascript:void(0);" onClick="loadField('specifications/FIX50SP2/fields/streamasgnrptid.html', 1)">StreamAsgnRptID (1501)</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

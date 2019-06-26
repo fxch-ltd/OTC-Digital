@@ -1,0 +1,153 @@
+html {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Verdana";
+    font-size: 12px;
+}
+
+body {
+    margin: 0px;
+    padding: 10px;
+}
+
+body#header {
+    background-image: url('img/header.jpg');
+    background-repeat:no-repeat;
+    background-color: #000000;
+    margin: 0;
+    height: 100px;
+}
+
+table, td, th {
+    border-style: solid;
+    border-width: 1px;
+}
+
+#right {
+    height: 90%;
+}
+
+#top {
+    height: 60%;
+    overflow: auto;
+    border-bottom: 1px solid;
+    border-color: #bbb;
+    padding: 10px;
+}
+
+#bottom {
+    height: 40%;
+    padding: 15px;
+    padding-left: 21%;
+}
+
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#searchResults {
+    height: 200px;
+    width: 200px;
+    border: 1px solid;
+    position: absolute;
+    overflow: auto;
+    visibility: hidden;
+    background-color: #fff;
+}
+
+#searchSpinner {
+    display: none;
+}
+
+.searchRow {
+    cursor: pointer;
+    font-size: 12px;
+    height: 16px;
+    border-bottom: 2px solid;
+    border-color: #aaa;
+    padding: 4px 0px 4px 0px;
+    margin: 0px;
+    background-repeat: no-repeat;
+    text-indent: 22px;
+}
+
+.fieldRow {
+    background-image: url('img/field_thumb.png');
+    background-position: 2px 5px;
+}
+
+.componentRow {
+    background-image: url('img/component_thumb.png');
+    background-position: 2px 5px;
+}
+
+.messageRow {
+    background-image: url('img/message_thumb.png');
+    background-position: 2px 7px;
+}
+
+.searchRow:hover {
+    background-color: #ddd;
+}
+
+.indentLevel1 {
+    text-indent:10px;
+    background-color: #eee;
+}
+
+.indentLevel2 {
+    text-indent: 20px;
+    background-color: #ccc;
+}
+
+.indentLevel3 {
+    text-indent: 30px;
+    background-color: #aaa;
+}
+
+.indentLevel4 {
+    text-indent: 40px;
+    background-color: #aaa;
+}
+
+#browserFields {
+    display: none;
+}
+
+#browserComponents {
+    display: none;
+}
+
+#browserMessages {
+    display: none;
+}
+table.groupTable {
+    width: 100%;
+}
+tr.subElement {
+    display: none;
+}
+img {
+    vertical-align: middle;
+}
+a {
+    vertical-align: middle;
+}
+h2 {
+    margin-left: 10px;
+    font-size: 16pt;
+    display: inline;
+    vertical-align: middle;
+}
+
+h3 {
+  font-size: 8pt;
+}
+h4 {
+  font-size: 6pt;
+}
+frameset, frame {
+    border: 4px solid black;
+}
