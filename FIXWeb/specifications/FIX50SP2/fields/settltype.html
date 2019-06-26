@@ -1,0 +1,47 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="field">
+<div class="field">
+    <div class="top"><div></div></div>
+        <div class="content">
+<img src="../../../img/field.png" height="32"/>
+<a href="javascript:void(0);" onClick="hideFieldPanel()" style="float: right;">[Hide]</a>
+<h2>SettlType (63)</h2>
+<h3>Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for SettlType (63) is 0 (Regular)<br/>Regular is defined as the default settlement period for the particular security.<br/>Additionally the following patterns may be uses as well as enum values<br/>Dx = FX tenor expression for &quot;days&quot;, e.g. &quot;D5&quot;, where &quot;x&quot; is any integer &gt; 0<br/>Wx = FX tenor expression for &quot;weeks&quot;, e.g. &quot;W13&quot;, where &quot;x&quot; is any integer &gt; 0<br/>Noted that tenors expressed using Dx, and Wx values do not denote business days, but calendar days.<br/></h3>
+<p>Type: String</p>
+<table class="enums">
+    <tr>
+        <td>0</td>
+        <td>Regular / FX Spot settlement (T+1 or T+2 depending on currency)<br/></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Cash (TOD / T+0)<br/></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Next Day (TOM / T+1)<br/></td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>Broken date - for FX expressing non-standard tenor, SettlDate (64) must be specified<br/></td>
+    </tr>
+</table>
+<h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quoteresponse.html', 1);">[QuoteResponse]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/newordersingle.html', 1);">[NewOrderSingle]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_no-last-look.html', 1);">[ExecutionReport - no-last-look]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport_lastlook.html', 1);">[ExecutionReport - lastLook]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/quote.html', 1);">[Quote]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/executionreport.html', 1);">[ExecutionReport]</a>&nbsp; 
+<h4>Used in Components:</h4>
+<a href="javascript:void(0);" onClick="loadComponent('../components/quotreqgrp.html', 1);">[QuotReqGrp]</a>&nbsp; 
+        </div>
+    <div class="bottom"><div></div></div>
+</div>
+</body>
+</html>

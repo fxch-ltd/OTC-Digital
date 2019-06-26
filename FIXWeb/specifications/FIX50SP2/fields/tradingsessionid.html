@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../userstyle.css">
+<script type="text/javascript" language="JavaScript" src="../../../js/browser.js"></script>
+</head>
+<body class="field">
+<div class="field">
+    <div class="top"><div></div></div>
+        <div class="content">
+<img src="../../../img/field.png" height="32"/>
+<a href="javascript:void(0);" onClick="hideFieldPanel()" style="float: right;">[Hide]</a>
+<h2>TradingSessionID (336)</h2>
+<h3>Identifier for Trading Session<br/>A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is determined by market or counterparties.<br/>To specify good for session where session spans more than one calendar day, use TimeInForce = Day in conjunction with TradingSessionID.<br/>Bilaterally agreed values of data type &quot;String&quot; that start with a character can be used for backward compatibility.<br/></h3>
+<p>Type: String</p>
+<table class="enums">
+    <tr>
+        <td>1</td>
+        <td>Day<br/></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>HalfDay<br/></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Morning<br/></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Afternoon<br/></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Evening<br/></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>After-hours<br/></td>
+    </tr>
+</table>
+<h4>Used in Messages:</h4>
+<a href="javascript:void(0);" onClick="loadMessage('../messages/tradingsessionstatus.html', 1);">[TradingSessionStatus]</a>&nbsp; 
+<a href="javascript:void(0);" onClick="loadMessage('../messages/tradingsessionstatusrequest.html', 1);">[TradingSessionStatusRequest]</a>&nbsp; 
+<h4>Used in Components:</h4>
+<a href="javascript:void(0);" onClick="loadComponent('../components/trdsesslstgrp.html', 1);">[TrdSessLstGrp]</a>&nbsp; 
+        </div>
+    <div class="bottom"><div></div></div>
+</div>
+</body>
+</html>
